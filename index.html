@@ -10,39 +10,40 @@
     <main>
         <div id="calculator">
             <div id="screen">
-                <div id="prevCalc"></div>
-                <div id="actualCalc"></div>
+                <div id="prevDisplay"></div>
+                <div id="display"></div>
             </div>
             <div id="keyboard">
                 <div id="block">
                     <div id="functional">
-                        <button class="btn func">C</button>
-                        <button class="btn func">DEL</button>
+                        <button value="C" class="btn">C</button>
+                        <button value="D" class="btn">DEL</button>
                     </div>
                     <div id="numbers">
-                        <button class="btn number" id="seven"> 7 </button>
-                        <button class="btn number" id="eight"> 8 </button>
-                        <button class="btn number" id="nine"> 9 </button>
-                        <button class="btn number" id="four"> 4 </button>
-                        <button class="btn number" id="five"> 5 </button>
-                        <button class="btn number" id="six"> 6 </button>
-                        <button class="btn number" id="one"> 1 </button>
-                        <button class="btn number" id="two"> 2 </button>
-                        <button class="btn number" id="three"> 3 </button>
-                        <button class="btn number" id="negative"> -/+ </button>
-                        <button class="btn number" id="zero"> 0 </button>
-                        <button class="btn number" id="point"> . </button>
+                        <button value="7" class="btn number" id="seven"> 7 </button>
+                        <button value="8" class="btn number" id="eight"> 8 </button>
+                        <button value="9" class="btn number" id="nine"> 9 </button>
+                        <button value="4" class="btn number" id="four"> 4 </button>
+                        <button value="5" class="btn number" id="five"> 5 </button>
+                        <button value="6" class="btn number" id="six"> 6 </button>
+                        <button value="1" class="btn number" id="one"> 1 </button>
+                        <button value="2" class="btn number" id="two"> 2 </button>
+                        <button value="3" class="btn number" id="three"> 3 </button>
+                        <button value="invert" class="btn number" id="invert"> -/+ </button>
+                        <button value="0" class="btn number" id="zero"> 0 </button>
+                        <button value="." class="btn number" id="point"> . </button>
                     </div>
                 </div>
                 <div id="operators">
-                    <button class="btn op" id="plus"> + </button>
-                    <button class="btn op" id="minus"> - </button>
-                    <button class="btn op" id="times"> * </button>
-                    <button class="btn op" id="divide"> / </button>
-                    <button class="btn op" id="equals"> = </button>
+                    <button value="+" class="btn op" id="plus"> + </button>
+                    <button value="-" class="btn op" id="minus"> - </button>
+                    <button value="*" class="btn op" id="times"> x </button>
+                    <button value="/" class="btn op" id="divide"> / </button>
+                    <button value="=" class="btn op" id="equals"> = </button>
                 </div>
             </div>
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
