@@ -29,6 +29,16 @@ buttons.forEach((btn) => {
 
             return;
         }
+        if (val === ".") {
+            if (currentInput.includes(".")) return;
+            if (currentInput === "") {
+                currentInput = "0.";
+            } else {
+                currentInput += ".";
+            }
+            updateDisplay(currentInput);
+            return; 
+        }
 
         if (["+","-","*","/"].includes(val)) { //check if the button is operator
             handleOperator(val);
@@ -70,23 +80,25 @@ function divide(num1,num2) {
 function operate() {
     let num1 = Number(prevInput);
     let num2 = Number(currentInput);
+    let result;
     switch (op) {
         case '+':
-            return add(num1,num2);
+            result = add(num1,num2).toFixed(6);
             break;
         case '-':
-            return subtract(num1,num2);
+            result = subtract(num1,num2).toFixed(6);
             break;
         case '*':
-             return multiply(num1,num2);
+             result = multiply(num1,num2).toFixed(6);
             break;
         case '/':
             if(num2 == 0) return "Error";
-             return divide(num1,num2);
+             result = divide(num1,num2).toFixed(6);
             break;
         default:
             break;
     }
+    return parseFloat(result);
 }
 function updateDisplay(value){
     display.textContent = value;
