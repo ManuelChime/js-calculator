@@ -104,7 +104,11 @@ body{
     border: 1px solid white;
 }
 #display{
-    border: 1px solid white;
     width: auto;
     height: 75%;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    font-size: 3.5rem;
+
 }
