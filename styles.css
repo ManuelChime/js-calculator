@@ -1,3 +1,7 @@
+@font-face {
+    font-family: digital_7;
+    src: url(./fonts/digital_7.ttf);
+}
 *{
     box-sizing: border-box;
     margin: 0;
@@ -97,6 +101,7 @@ body{
     display: flex;
     flex-direction: column;
     align-content: stretch;
+    font-family: digital_7;
 }
 #prevDisplay{
     width: 100%;
@@ -107,6 +112,7 @@ body{
     justify-content: end;
     align-items: flex-end;
     font-size: 1.5rem;
+    padding: 3%;
 }
 #display{
     width: auto;
@@ -114,7 +120,6 @@ body{
     display: flex;
     justify-content: end;
     align-items: flex-end;
-    font-size: 3.5rem;
-    font-family: ;
-
+    font-size: 4rem;
+    padding: 3%;
 }
