@@ -81,6 +81,7 @@ function operate() {
              return multiply(num1,num2);
             break;
         case '/':
+            if(num2 == 0) return "Error";
              return divide(num1,num2);
             break;
         default:
