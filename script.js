@@ -1,5 +1,6 @@
 const display = document.querySelector("#display")
 const buttons = document.querySelectorAll(".btn")
+const history = document.querySelector("#prevDisplay");
 
 let currentInput = "";
 let prevInput = "";
@@ -13,15 +14,17 @@ buttons.forEach((btn) => {
             prevInput = "";
             op = null;
             updateDisplay(0);
+            history.textContent = "";
             return;
         }
         if (val === "D") {
-            currentInput = currentInput.slice(0, -1);
+            currentInput = currentInput.slice(0, -1); //Remove the last character in the string
             updateDisplay(currentInput);
             return;
         }
         if (val === "=") {
             if (currentInput === "" || prevInput === "" ) return; //check if we have enough data to operate
+            history.textContent = `${prevInput} ${op} ${currentInput}`;
             currentInput = operate();
             updateDisplay(currentInput);
             prevInput = currentInput;
@@ -58,6 +61,7 @@ function handleOperator(nextOp){
     if (currentInput && op) {
         currentInput =  operate();
         updateDisplay(currentInput);
+        history.textContent = `${prevInput} ${op} ${currentInput}`;
     }
     prevInput = currentInput;
     currentInput = "";
